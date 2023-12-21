@@ -62,6 +62,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'django.middleware.charset.CharsetMiddleware',
 ]
 
 ROOT_URLCONF = 'novelis_table_filter_mail_project.urls'
@@ -91,7 +92,7 @@ WSGI_APPLICATION = 'novelis_table_filter_mail_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'management', 'commands', 'db', 'db_sqlite3.db'),
+        'NAME': os.path.join(BASE_DIR, 'management_before_django', 'db', 'db_sqlite3.db'),
     }
 }
 
@@ -126,6 +127,8 @@ USE_I18N = True
 
 USE_TZ = True
 
+DEFAUT_CHARSET = 'ISO-8859-1'
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
@@ -141,12 +144,17 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ORIGIN_ALLOW_ALL = True
 
 #EMAIL:
-# ADMINS = [('Suporte', 'suporte.vestcasa@gmail.com')]
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-# USE THIS FOR OUTLOOK!
+
+EMAIL_HOST = 'smtp-mail.outlook.com'
+# EMAIL_HOST = 'smtp.office365.com' #outlook
 EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
-EMAIL_HOST_PASSWORD = os.environ.get("APP_PASSWORD")
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
+
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
+
+# USE THIS FOR GMAIL!
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_PASSWORD = os.environ.get("APP_PASSWORD")
+# EMAIL_USE_SSL = False
