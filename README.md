@@ -106,14 +106,6 @@ pip install -r requirements.txt
 code .
 ```
 
-Adicionar os seguintes diretórios:
-
-./management_before_django/table_management_scripts
-```
-mkdir db
-mkdir raw_table
-```
-
 # Comandos
 
 Para todos os procedimentos necessarios basta rodar apenas o comando abaixot:
