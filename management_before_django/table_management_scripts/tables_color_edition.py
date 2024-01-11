@@ -84,7 +84,8 @@ def filter_table_by_yellow(path: Path, sheet: str):
 
                 # ORDER BY:
                 df['PREVISAO DE CHEGADA'] = pd.to_datetime(df['PREVISAO DE CHEGADA'], errors='coerce')
-                df = df.sort_values(by='PREVISAO DE CHEGADA', ascending=False)
+                df = df.sort_values(by='PREVISAO DE CHEGADA', ascending=True)
+                # df = df.sort_values(by='STATUS', ascending=True)
 
                 # print(df['METAL'])
                 # print(df)
