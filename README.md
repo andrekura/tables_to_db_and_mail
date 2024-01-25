@@ -117,7 +117,9 @@ touch .env
 ```
 
 Obs: as informações contidas no arquivo .env não devem ser compartilhadas pois contém informações sensíveis. O arquivo já consta no .gitignore para não ser subido no repositório.
+
 <br>
+
 # Comandos
 
 Para todos os procedimentos necessarios basta rodar apenas o comando abaixo:
