@@ -106,9 +106,21 @@ pip install -r requirements.txt
 code .
 ```
 
+<h6>.env:</h6>
+
+No diretório raiz existe o arquivo <b>.env.example</b> que contém referências de variáveis de ambiente que serão usadas para a aplicação.
+Para isso, é necessário criar o arquivo .env e preenchê-lo com as mesmas variáveis:
+
+./
+```
+touch .env
+```
+
+Obs: as informações contidas no arquivo .env não devem ser compartilhadas pois contém informações sensíveis. O arquivo já consta no .gitignore para não ser subido no repositório.
+<br>
 # Comandos
 
-Para todos os procedimentos necessarios basta rodar apenas o comando abaixot:
+Para todos os procedimentos necessarios basta rodar apenas o comando abaixo:
 
 ./management_before_django/table_management_scripts/
 
@@ -117,6 +129,7 @@ python3 tables_to_db.py
 ```
 
 <br>
+
 
 # Documentação
 
